@@ -1,0 +1,11 @@
+<div class="home">
+   <p>{{msg}}</p>
+   <button (click)="x()">Click</button>
+    <button (click)="y()">Click</button>
+    <button [disabled]="isdisabled">Click</button>
+    <br>
+    <img [src]="imgurl" alt="img">
+    <br>
+    <input [(ngModel)]="user.name">
+    <p>{{user.name}}</p>
+</div>

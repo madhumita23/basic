@@ -1,0 +1,24 @@
+<div class="abt">
+    <p>this is about page</p>
+</div>
+<div>
+    <h1>{{title}}</h1>
+</div>
+<div class="row">
+    <input
+     type="text"
+     placeholder="enter new task"
+     [(ngModel)]="newtask"
+     (keyup.enter)="addtask()"
+     maxlength="100"
+    
+    />
+    <button (click)="addtask()">Add</button>
+    <ul *ngIf="tasks.length >0">
+        <li *ngFor="let x of tasks; let i=index">
+            {{i+1}}.{{x.title}}
+
+        </li>
+
+    </ul>
+</div>

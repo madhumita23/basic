@@ -1,0 +1,18 @@
+<div class="con">
+    <p>this is contact page</p>
+</div>
+<div>
+    <button (click)="x()">
+        {{isloggedin ? 'Logout' :'Login'}}
+    </button>
+    <p *ngIf="isloggedin">Welcome to dashboard</p>
+    <p *ngIf="!isloggedin">please login continue</p>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let x of courses; let i=index">
+            {{i+1}} .{{x}}
+        </li>
+
+    </ul>
+</div>
